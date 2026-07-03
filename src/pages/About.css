@@ -1,0 +1,177 @@
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+/* ---------- Layout ---------- */
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+/* ---------- Image Placeholder ---------- */
+.about__image-wrapper {
+  position: relative;
+}
+
+.about__image-placeholder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--primary-gradient);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.about__image-decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+  background: #fff;
+}
+
+.about__image-decoration--top {
+  width: 200px;
+  height: 200px;
+  top: -40px;
+  right: -40px;
+}
+
+.about__image-decoration--bottom {
+  width: 160px;
+  height: 160px;
+  bottom: -30px;
+  left: -30px;
+}
+
+.about__cross-icon {
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+.about__image-label {
+  margin-top: 20px;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Text Content ---------- */
+.about__text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about__mission {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+}
+
+/* ---------- Values Grid ---------- */
+.about__values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about__value-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+  border-left: 3px solid var(--primary);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.about__value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-teal);
+}
+
+/* ---------- Value Icon ---------- */
+.about__value-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary-lightest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  transition: background var(--transition-base), color var(--transition-base);
+}
+
+.about__value-card:hover .about__value-icon {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* ---------- Value Info ---------- */
+.about__value-info {
+  flex: 1;
+}
+
+.about__value-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.about__value-description {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about__image-placeholder {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .about__content {
+    margin-top: 40px;
+    gap: 32px;
+  }
+
+  .about__values-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .about__value-card {
+    padding: 16px;
+  }
+
+  .about__image-placeholder {
+    max-width: 100%;
+    aspect-ratio: 5 / 4;
+  }
+}

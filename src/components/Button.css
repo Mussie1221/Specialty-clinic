@@ -1,0 +1,106 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+/* Sizes */
+.btn--small {
+  padding: 8px 20px;
+  font-size: 0.8125rem;
+}
+
+.btn--medium {
+  padding: 12px 28px;
+  font-size: 0.9375rem;
+}
+
+.btn--large {
+  padding: 16px 36px;
+  font-size: 1rem;
+}
+
+/* Primary variant */
+.btn--primary {
+  background: var(--primary);
+  color: var(--text-white);
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
+}
+
+.btn--primary:hover {
+  background: var(--primary-hover);
+  box-shadow: 0 6px 25px rgba(13, 148, 136, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(13, 148, 136, 0.3);
+}
+
+/* Outline variant */
+.btn--outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn--outline:hover {
+  background: var(--primary);
+  color: var(--text-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(13, 148, 136, 0.3);
+}
+
+/* White variant */
+.btn--white {
+  background: var(--bg-white);
+  color: var(--primary);
+  box-shadow: var(--shadow-md);
+}
+
+.btn--white:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Ghost variant */
+.btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.btn--ghost:hover {
+  background: var(--bg-light);
+  color: var(--primary);
+}

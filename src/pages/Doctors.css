@@ -1,0 +1,223 @@
+/* ============================================
+   DOCTORS SECTION
+   ============================================ */
+
+.doctors {
+  background-color: var(--bg-light);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle decorative background */
+.doctors::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, var(--primary-lightest) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.doctors::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--primary-lightest) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* ---------- Grid ---------- */
+.doctors__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Card ---------- */
+.doctors-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+
+  /* Scroll animation initial state */
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.doctors-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    box-shadow var(--transition-base);
+}
+
+.doctors-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl), 0 0 40px rgba(13, 148, 136, 0.08);
+}
+
+.doctors-card--visible:hover {
+  transform: translateY(-8px);
+}
+
+/* ---------- Photo Area ---------- */
+.doctors-card__photo {
+  height: 280px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-slow);
+}
+
+.doctors-card:hover .doctors-card__photo {
+  transform: scale(1.03);
+}
+
+.doctors-card__initials {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 4px;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.doctors-card__photo-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 80%, rgba(20, 184, 166, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ---------- Content ---------- */
+.doctors-card__content {
+  padding: 24px;
+}
+
+.doctors-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.doctors-card__specialty {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-lightest);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+}
+
+.doctors-card__experience {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.doctors-card__experience svg {
+  flex-shrink: 0;
+  color: var(--primary-light);
+}
+
+.doctors-card__bio {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+/* ---------- Social Links ---------- */
+.doctors-card__socials {
+  display: flex;
+  gap: 10px;
+}
+
+.doctors-card__social-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg-light);
+  color: var(--text-secondary);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.doctors-card__social-link:hover {
+  background: var(--primary);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+.doctors-card__social-link svg {
+  display: block;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .doctors__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .doctors__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .doctors-card__photo {
+    height: 240px;
+  }
+
+  .doctors-card__initials {
+    font-size: 3.5rem;
+  }
+}

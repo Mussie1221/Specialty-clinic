@@ -1,0 +1,118 @@
+/* ============================================
+   SERVICES SECTION
+   ============================================ */
+
+/* ---------- Grid ---------- */
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 60px;
+}
+
+/* ---------- Card ---------- */
+.services__card {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+  border-top: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.services__card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-teal);
+  border-top-color: var(--primary);
+}
+
+/* ---------- Icon ---------- */
+.services__card-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 24px;
+  transition: transform var(--transition-spring);
+}
+
+.services__card:hover .services__card-icon {
+  transform: scale(1.12);
+}
+
+/* ---------- Title ---------- */
+.services__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+/* ---------- Description ---------- */
+.services__card-description {
+  font-size: 0.938rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+/* ---------- Learn More Link ---------- */
+.services__card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.938rem;
+  font-weight: 600;
+  color: var(--primary);
+  transition: gap var(--transition-base), color var(--transition-fast);
+}
+
+.services__card-link:hover {
+  color: var(--primary-hover);
+  gap: 12px;
+}
+
+.services__card-arrow {
+  transition: transform var(--transition-base);
+}
+
+.services__card-link:hover .services__card-arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 992px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .services__card {
+    padding: 24px;
+  }
+
+  .services__card-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 20px;
+  }
+}
