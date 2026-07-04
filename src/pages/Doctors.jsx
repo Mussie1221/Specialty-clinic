@@ -52,7 +52,7 @@ function DoctorCard({ doctor, delay }) {
       style={{ transitionDelay: `${delay}ms` }}
     >
       {/* Photo placeholder */}
-      <div className="doctors-card__photo">
+      <div className={`doctors-card__photo ${!doctor.photo ? "doctors-card__photo--placeholder" : ""}`}>
         {doctor.photo ? (
           <img
             src={doctor.photo}
@@ -62,7 +62,7 @@ function DoctorCard({ doctor, delay }) {
         ) : (
           <div className="doctors-card__initials">{doctor.initials}</div>
         )}
-        <div className="doctors-card__photo-overlay" />
+        {!doctor.photo && <div className="doctors-card__photo-overlay" />}
       </div>
 
       {/* Content */}

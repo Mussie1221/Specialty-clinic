@@ -17,7 +17,11 @@
   right: -120px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(46, 125, 50, 0.08) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(46, 125, 50, 0.08) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   pointer-events: none;
   opacity: 0.5;
@@ -30,7 +34,11 @@
   left: -80px;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(19, 64, 64, 0.06) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(19, 64, 64, 0.06) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   pointer-events: none;
   opacity: 0.4;
@@ -52,7 +60,9 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
 
   /* Scroll animation initial state */
   opacity: 0;
@@ -62,7 +72,10 @@
 .doctors-card--visible {
   opacity: 1;
   transform: translateY(0);
-  transition: opacity 0.7s ease, transform 0.7s ease, box-shadow var(--transition-base);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease,
+    box-shadow var(--transition-base);
 }
 
 .doctors-card:hover {
@@ -76,8 +89,6 @@
 
 /* ---------- Photo Area ---------- */
 .doctors-card__photo {
-  height: 280px;
-  background: linear-gradient(135deg, #2e7d32 0%, #1a4d4d 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,15 +97,19 @@
   transition: transform var(--transition-slow);
 }
 
+.doctors-card__photo--placeholder {
+  height: 280px;
+  background: linear-gradient(135deg, #2e7d32 0%, #1a4d4d 100%);
+}
+
 .doctors-card:hover .doctors-card__photo {
   transform: scale(1.03);
 }
 
 .doctors-card__photo-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  display: block;
 }
 
 .doctors-card__initials {
@@ -112,8 +127,17 @@
 .doctors-card__photo-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 30% 80%, rgba(76, 175, 80, 0.25) 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  background:
+    radial-gradient(
+      circle at 30% 80%,
+      rgba(76, 175, 80, 0.25) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 50%
+    );
   pointer-events: none;
   z-index: 1;
 }
@@ -178,7 +202,7 @@
     margin: 40px auto 0;
   }
 
-  .doctors-card__photo {
+  .doctors-card__photo--placeholder {
     height: 240px;
   }
 

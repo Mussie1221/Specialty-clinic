@@ -24,7 +24,7 @@ const services = [
     ),
     title: "Emergency Care",
     description:
-      "24/7 emergency medical services with rapid response teams and state-of-the-art trauma care facilities.",
+      "24/7 emergency medical and Gyn/obs services by specialists",
   },
   {
     icon: (
@@ -45,7 +45,7 @@ const services = [
     ),
     title: "Outpatient Services",
     description:
-      "Comprehensive outpatient consultations with experienced specialists across multiple disciplines.",
+      "Comprehensive outpatient service with experienced specialists across multiple disciplines.",
   },
   {
     icon: (
@@ -66,7 +66,7 @@ const services = [
     ),
     title: "Surgery",
     description:
-      "Advanced surgical procedures using minimally invasive techniques and cutting-edge equipment.",
+      "Advanced surgical procedures in collaboration with private general hosiptals and minor procedure including male circumscions ",
   },
   {
     icon: (
@@ -110,7 +110,7 @@ const services = [
     ),
     title: "Cardiology",
     description:
-      "Complete cardiac care including diagnostics, treatment, and rehabilitation programs.",
+      "consulation and echo cardiography service by cardiologist.",
   },
   {
     icon: (
@@ -134,6 +134,28 @@ const services = [
     title: "Laboratory",
     description:
       "Modern diagnostic laboratory services with accurate and timely test results.",
+  },
+  {
+    icon: (
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+        <path d="M12 12v.01" />
+        <path d="M8 12v.01" />
+        <path d="M16 12v.01" />
+      </svg>
+    ),
+    title: "Radiology",
+    description:
+      "24/7 services with radiologist only, 3d/4d ultrasound and digital x-ray.",
   },
 ];
 
@@ -161,23 +183,6 @@ export default function Services() {
               <p className="services__card-description">
                 {service.description}
               </p>
-              <a href="#" className="services__card-link">
-                Learn More
-                <svg
-                  className="services__card-arrow"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M5 12h14" />
-                  <path d="M12 5l7 7-7 7" />
-                </svg>
-              </a>
             </div>
           ))}
         </div>

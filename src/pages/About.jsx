@@ -90,7 +90,7 @@ export default function About() {
           subtitle="About Us"
           title="Why Choose"
           highlight="Haset Multispeciality Clinic"
-          description="Founded with a vision to provide world-class healthcare, Haset Multispeciality Clinic has been a trusted name in medical excellence, delivering compassionate care to our community."
+          description="At Haset Multispeciality Clinic, we provide specialist-only care, ensuring every patient is treated exclusively by qualified medical specialists. Our services are available 24/7, including weekends and holidays, so you can always access reliable and continuous expert medical attention whenever you need it."
         />
 
         <div className="about__content">
@@ -154,11 +154,7 @@ export default function About() {
             ref={contentRef}
           >
             <p className="about__mission">
-              At Haset Multispeciality Clinic, we believe that every patient
-              deserves access to exceptional medical care. Our team of
-              experienced physicians, nurses, and healthcare professionals work
-              together to deliver personalized treatment plans, ensuring the
-              best possible outcomes for our patients and their families.
+             We believe every patient deserves compassionate and high-quality healthcare. Our team of experienced physicians, nurses, and healthcare professionals works together to provide personalized treatment plans tailored to each patient’s needs, ensuring the best possible health outcomes for patients and their families.
             </p>
 
             <div className="about__values-grid">
