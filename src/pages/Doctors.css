@@ -3,33 +3,34 @@
    ============================================ */
 
 .doctors {
-  background-color: var(--bg-light);
+  background: #f8fdfd;
   position: relative;
   overflow: hidden;
+  border-top: 1px solid rgba(19, 64, 64, 0.1);
 }
 
 /* Subtle decorative background */
 .doctors::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -120px;
   right: -120px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, var(--primary-lightest) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(46, 125, 50, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   opacity: 0.5;
 }
 
 .doctors::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -80px;
   left: -80px;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, var(--primary-lightest) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(19, 64, 64, 0.06) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   opacity: 0.4;
@@ -38,21 +39,20 @@
 /* ---------- Grid ---------- */
 .doctors__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 28px;
   position: relative;
   z-index: 1;
+  margin-top: 48px;
 }
 
 /* ---------- Card ---------- */
 .doctors-card {
-  background: var(--bg-white);
+  background: #ffffff;
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  transition:
-    transform var(--transition-base),
-    box-shadow var(--transition-base);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
 
   /* Scroll animation initial state */
   opacity: 0;
@@ -62,15 +62,12 @@
 .doctors-card--visible {
   opacity: 1;
   transform: translateY(0);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease,
-    box-shadow var(--transition-base);
+  transition: opacity 0.7s ease, transform 0.7s ease, box-shadow var(--transition-base);
 }
 
 .doctors-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-xl), 0 0 40px rgba(13, 148, 136, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
 .doctors-card--visible:hover {
@@ -80,7 +77,7 @@
 /* ---------- Photo Area ---------- */
 .doctors-card__photo {
   height: 280px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+  background: linear-gradient(135deg, #2e7d32 0%, #1a4d4d 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,6 +88,13 @@
 
 .doctors-card:hover .doctors-card__photo {
   transform: scale(1.03);
+}
+
+.doctors-card__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .doctors-card__initials {
@@ -108,8 +112,7 @@
 .doctors-card__photo-overlay {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 30% 80%, rgba(20, 184, 166, 0.25) 0%, transparent 60%),
+  background: radial-gradient(circle at 30% 80%, rgba(76, 175, 80, 0.25) 0%, transparent 60%),
     radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
   pointer-events: none;
   z-index: 1;
@@ -118,6 +121,7 @@
 /* ---------- Content ---------- */
 .doctors-card__content {
   padding: 24px;
+  text-align: center;
 }
 
 .doctors-card__name {
@@ -131,86 +135,47 @@
 .doctors-card__specialty {
   display: inline-block;
   font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--primary);
-  background: var(--primary-lightest);
-  padding: 4px 14px;
-  border-radius: var(--radius-full);
-  margin-bottom: 8px;
-}
-
-.doctors-card__experience {
-  display: flex;
-  align-items: center;
-  gap: 6px;
   font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 12px;
-}
-
-.doctors-card__experience svg {
-  flex-shrink: 0;
-  color: var(--primary-light);
-}
-
-.doctors-card__bio {
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin-bottom: 20px;
-}
-
-/* ---------- Social Links ---------- */
-.doctors-card__socials {
-  display: flex;
-  gap: 10px;
-}
-
-.doctors-card__social-link {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--bg-light);
-  color: var(--text-secondary);
-  transition:
-    background var(--transition-fast),
-    color var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.doctors-card__social-link:hover {
-  background: var(--primary);
-  color: var(--text-white);
-  transform: translateY(-2px);
-}
-
-.doctors-card__social-link svg {
-  display: block;
+  font-weight: 600;
+  color: #2e7d32;
+  background: rgba(46, 125, 50, 0.1);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
 }
 
 /* ============================================
    RESPONSIVE
    ============================================ */
 
-/* Tablet */
+/* Desktop (1200px and below) */
+@media (max-width: 1200px) {
+  .doctors__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet (1024px and below) */
 @media (max-width: 1024px) {
   .doctors__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
 }
 
-/* Mobile */
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .doctors__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (600px and below) */
 @media (max-width: 600px) {
   .doctors__grid {
     grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 420px;
-    margin: 0 auto;
+    max-width: 360px;
+    margin: 40px auto 0;
   }
 
   .doctors-card__photo {

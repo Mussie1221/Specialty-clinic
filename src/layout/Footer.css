@@ -3,7 +3,7 @@
    ============================================ */
 
 .footer {
-  background: var(--bg-dark);
+  background: #163131;
   color: rgba(255, 255, 255, 0.7);
   padding: 80px 0 0;
 }
@@ -32,10 +32,9 @@
 }
 
 .footer__logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary-light);
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .footer__logo-accent {

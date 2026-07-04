@@ -1,27 +1,5 @@
-import Button from '../components/Button';
-import { useCounter } from '../hooks/useAnimations';
-import './Hero.css';
-
-const STATS = [
-  { end: 150, suffix: '+', label: 'Doctors At Work' },
-  { end: 1200, suffix: '+', label: 'Satisfied Patients' },
-  { end: 600, suffix: '+', label: 'Bed Facility' },
-  { end: 50, suffix: '+', label: 'Specialties' },
-];
-
-function StatItem({ end, suffix, label }) {
-  const [ref, count] = useCounter(end, 2000);
-
-  return (
-    <div className="hero__stat" ref={ref}>
-      <div className="hero__stat-number">
-        {count}
-        {suffix}
-      </div>
-      <div className="hero__stat-label">{label}</div>
-    </div>
-  );
-}
+import Button from "../components/Button";
+import "./Hero.css";
 
 export default function Hero() {
   return (
@@ -30,25 +8,27 @@ export default function Hero() {
         <div className="hero__content">
           <div className="hero__badge">
             <span className="hero__badge-dot" />
-            Welcome to Hasset Clinic
+            Welcome to Haset Multispeciality Clinic
           </div>
 
           <h1 className="hero__title">
-            Your Health, Our{' '}
-            <span className="hero__title-highlight">Priority</span>
+            You Will Rejoice in Our{" "}
+            <span className="hero__title-highlight">Services</span>
           </h1>
 
           <p className="hero__description">
-            At Hasset Clinic, we combine cutting-edge medical technology with
-            compassionate care to deliver the best health outcomes for you and
-            your family. Our team of dedicated professionals is here to guide
-            you on your journey to wellness.
+            At Haset Multispeciality Clinic, we are dedicated to providing
+            compassionate, high-quality healthcare through experienced
+            professionals, modern medical technology, and patient-centered
+            treatment. Your health, comfort, and well-being are at the heart of
+            everything we do.
           </p>
 
           <div className="hero__actions">
             <Button href="#services" size="large">
               Our Services
             </Button>
+
             <Button href="#contact" variant="outline" size="large">
               Contact Us
             </Button>
@@ -92,11 +72,7 @@ export default function Hero() {
             </div>
 
             <div className="hero__float-icon hero__float-icon--1">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg viewBox="0 0 24 24" fill="none">
                 <path
                   d="M12 21C12 21 3 14 3 8.5C3 5.5 5.5 3 8.5 3C10.1 3 11.4 3.8 12 5C12.6 3.8 13.9 3 15.5 3C18.5 3 21 5.5 21 8.5C21 14 12 21 12 21Z"
                   fill="currentColor"
@@ -105,11 +81,7 @@ export default function Hero() {
             </div>
 
             <div className="hero__float-icon hero__float-icon--2">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg viewBox="0 0 24 24" fill="none">
                 <path
                   d="M12 2L4 6V12C4 17 7.5 21.5 12 22.5C16.5 21.5 20 17 20 12V6L12 2Z"
                   stroke="currentColor"
@@ -135,11 +107,7 @@ export default function Hero() {
             </div>
 
             <div className="hero__float-icon hero__float-icon--3">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg viewBox="0 0 24 24" fill="none">
                 <rect
                   x="8"
                   y="2"
@@ -170,11 +138,7 @@ export default function Hero() {
             </div>
 
             <div className="hero__float-icon hero__float-icon--4">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg viewBox="0 0 24 24" fill="none">
                 <polyline
                   points="2,13 6,13 8,8 11,18 14,6 16,13 22,13"
                   stroke="currentColor"
@@ -183,14 +147,6 @@ export default function Hero() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </div>
-          </div>
-
-          <div className="hero__stats">
-            <div className="hero__stats-grid">
-              {STATS.map((stat) => (
-                <StatItem key={stat.label} {...stat} />
-              ))}
             </div>
           </div>
         </div>

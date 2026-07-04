@@ -1,13 +1,13 @@
-import Navbar from './layout/Navbar'
-import Hero from './pages/Hero'
-import About from './pages/About'
-import Services from './pages/Services'
-import Doctors from './pages/Doctors'
-import Stats from './pages/Stats'
-import Testimonials from './pages/Testimonials'
-import Contact from './pages/Contact'
-import Footer from './layout/Footer'
-import './App.css'
+import Navbar from "./layout/Navbar";
+import Hero from "./pages/Hero";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Doctors from "./pages/Doctors";
+import Facilities from "./pages/Facilities";
+import Stats from "./pages/Stats";
+import Contact from "./pages/Contact";
+import Footer from "./layout/Footer";
+import "./App.css";
 
 function App() {
   return (
@@ -17,14 +17,14 @@ function App() {
         <Hero />
         <About />
         <Services />
-        <Stats />
         <Doctors />
-        <Testimonials />
+        <Stats />
+        <Facilities />
         <Contact />
       </main>
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

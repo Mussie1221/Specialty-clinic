@@ -2,9 +2,32 @@
    CONTACT SECTION
    ============================================ */
 
+#contact {
+  background: linear-gradient(135deg, #f0fafa 0%, #e6f5f5 100%);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(19, 64, 64, 0.1);
+}
+
+#contact::before {
+  content: "";
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(46, 125, 50, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
 .contact__grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr;
   gap: 48px;
   margin-top: 48px;
   align-items: start;
@@ -21,16 +44,30 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  background: var(--bg-white);
+  background: #ffffff;
   border-radius: var(--radius-md);
   padding: 22px 24px;
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base),
+    background-color var(--transition-base);
 }
 
 .contact__info-card:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-2px);
+  background-color: rgba(46, 125, 50, 0.05);
+}
+
+.contact__copy-icon {
+  opacity: 0.5;
+  margin-left: auto;
+  transition: opacity var(--transition-fast);
+}
+
+.contact__info-card:hover .contact__copy-icon {
+  opacity: 1;
 }
 
 .contact__info-icon {
@@ -38,8 +75,8 @@
   height: 48px;
   min-width: 48px;
   border-radius: 50%;
-  background: var(--primary);
-  color: var(--text-white);
+  background: #2e7d32;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,19 +93,19 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--primary);
+  color: #2e7d32;
   margin-bottom: 2px;
 }
 
 .contact__info-value {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   line-height: 1.5;
 }
 
 /* ---------- Form ---------- */
 .contact__form {
-  background: var(--bg-white);
+  background: #ffffff;
   border-radius: var(--radius-xl);
   padding: 40px;
   box-shadow: var(--shadow-lg);
@@ -99,26 +136,28 @@
   width: 100%;
   height: 48px;
   padding: 0 16px;
-  border: 1.5px solid var(--border-color);
+  border: 1.5px solid rgba(19, 64, 64, 0.15);
   border-radius: var(--radius-md);
   font-size: 0.95rem;
   color: var(--text-primary);
-  background: var(--bg-white);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  background: #ffffff;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .contact__input::placeholder {
-  color: var(--text-muted);
+  color: rgba(19, 64, 64, 0.4);
 }
 
 .contact__input:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
 }
 
 .contact__select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23475569' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 5.646a.5.5 0 0 1 .708 0L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231a4d4d' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 5.646a.5.5 0 0 1 .708 0L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
   padding-right: 40px;
