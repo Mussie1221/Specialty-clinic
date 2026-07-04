@@ -1,6 +1,6 @@
 import Button from '../components/Button';
 import { useCounter } from '../hooks/useAnimations';
-import './hero.css';
+import './Hero.css';
 
 const STATS = [
   { end: 150, suffix: '+', label: 'Doctors At Work' },
