@@ -1,4 +1,5 @@
 import "./Facilities.css";
+import chemistryAnalyser from "../assets/chemistry-analyser1.png";
 
 const FACILITIES = [
   {
@@ -31,9 +32,10 @@ const FACILITIES = [
     id: 4,
     name: "Mindray Fully Automated Chemistry Analyzer",
     description:
-      "High-performance laboratory equipment capable of running up to 240 tests per hour. Provides accurate biochemistry, hormonal, and electrolyte (including sodium) .",
+      "multi-functional benchtop fully automated chemistry analyzer with a throughput of 240 tests per hour.",
     image:
-      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=mindray%20fully%20automated%20medical%20machine%20in%20hospital&image_size=square_hd",
+      // "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=mindray%20fully%20automated%20medical%20machine%20in%20hospital&image_size=square_hd",
+      chemistryAnalyser,
   },
   {
     id: 5,

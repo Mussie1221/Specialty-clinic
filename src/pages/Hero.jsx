@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="hero__content">
           <div className="hero__badge">
             <span className="hero__badge-dot" />
-            Welcome to Haset Multispeciality Clinic
+            Welcome to Haset Multispecialty Clinic
           </div>
 
           <h1 className="hero__title">
@@ -17,7 +17,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero__description">
-            At Haset Multispeciality Clinic, we are dedicated to providing
+            At Haset Multispecialty Clinic, we are dedicated to providing
             compassionate, high-quality healthcare through experienced
             professionals, modern medical technology, and patient-centered
             treatment. Your health, comfort, and well-being are at the heart of

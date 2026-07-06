@@ -73,8 +73,8 @@
 
 .facility-card__image {
   width: 100%;
-  height: 220px;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
 
 .facility-card__content {
@@ -116,6 +116,7 @@
   }
 
   .facility-card__image {
-    height: 180px;
+    width: 100%;
+    height: auto;
   }
 }

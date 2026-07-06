@@ -95,10 +95,11 @@
   position: relative;
   overflow: hidden;
   transition: transform var(--transition-slow);
+  aspect-ratio: 4/5;
+  width: 100%;
 }
 
 .doctors-card__photo--placeholder {
-  height: 280px;
   background: linear-gradient(135deg, #2e7d32 0%, #1a4d4d 100%);
 }
 
@@ -108,7 +109,9 @@
 
 .doctors-card__photo-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
   display: block;
 }
 
@@ -200,10 +203,6 @@
     gap: 20px;
     max-width: 360px;
     margin: 40px auto 0;
-  }
-
-  .doctors-card__photo--placeholder {
-    height: 240px;
   }
 
   .doctors-card__initials {

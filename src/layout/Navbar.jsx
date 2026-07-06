@@ -54,17 +54,17 @@ export default function Navbar() {
         <a
           href="#home"
           className="navbar__logo"
-          aria-label="Haset Multispeciality Clinic Home"
+          aria-label="Haset Multispecialty Clinic Home"
           onClick={closeMobileMenu}
         >
           <img
             src={hasetLogo}
-            alt="Haset Multispeciality Clinic"
+            alt="Haset Multispecialty Clinic"
             className="navbar__logo-icon"
           />
 
           <span className="navbar__logo-text">
-            Haset <span>Multispeciality Clinic</span>
+            Haset <span>Multispecialty Clinic</span>
           </span>
         </a>
 

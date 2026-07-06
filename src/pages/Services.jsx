@@ -155,7 +155,7 @@ const services = [
     ),
     title: "Radiology",
     description:
-      "24/7 services with radiologist only, 3d/4d ultrasound and digital x-ray.",
+      "24/7 services with radiologist only, 3D/4D ultrasound and digital x-ray.",
   },
 ];
 

@@ -28,13 +28,11 @@ export default function Footer() {
             <a href="#home" className="footer__logo">
               <img
                 src={hasetLogo}
-                alt="Haset Multispeciality Clinic"
+                alt="Haset Multispecialty Clinic"
                 className="footer__logo-icon"
               />
               Haset{" "}
-              <span className="footer__logo-accent">
-                Multispeciality Clinic
-              </span>
+              <span className="footer__logo-accent">Multispecialty Clinic</span>
             </a>
             <p className="footer__description">
               Providing world-class healthcare with compassion and innovation.
@@ -93,7 +91,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="footer__bottom">
           <p className="footer__copyright">
-            &copy; {new Date().getFullYear()} Haset Multispeciality Clinic. All
+            &copy; {new Date().getFullYear()} Haset Multispecialty Clinic. All
             rights reserved.
           </p>
           <div className="footer__legal">

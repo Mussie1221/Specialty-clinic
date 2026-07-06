@@ -6,7 +6,7 @@ const contactInfo = [
   {
     id: "address",
     label: "Address",
-    value: "Haset Multispeciality Clinic, Ayat, Addis Ababa",
+    value: "Haset Multispecialty Clinic, Ayat, Addis Ababa",
     icon: (
       <svg
         width="24"

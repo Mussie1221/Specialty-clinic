@@ -2,6 +2,9 @@ import { useScrollAnimation } from "../hooks/useAnimations";
 import SectionTitle from "../components/SectionTitle";
 import drYaredTesfaye from "../assets/Doctors/dr-yared-tesfaye.png";
 import drBaslielEliyas from "../assets/Doctors/dr-basliel-eliyas.png";
+import drAshagrachewHaile from "../assets/Doctors/dr-ashagrachew-haile.png";
+import drMiheretKassahun from "../assets/Doctors/dr-miheret-kassahun.png";
+import drNebiyouDamtew from "../assets/Doctors/dr-nebiyou-damtew.png";
 import "./Doctors.css";
 
 const doctors = [
@@ -17,7 +20,7 @@ const doctors = [
     name: "Dr. Ashagrachew Haile",
     initials: "AH",
     specialty: "Internist",
-    photo: null,
+    photo: drAshagrachewHaile,
   },
   {
     id: 3,
@@ -31,14 +34,14 @@ const doctors = [
     name: "Dr. Miheret Kassahun",
     initials: "MK",
     specialty: "Pediatrician",
-    photo: null,
+    photo: drMiheretKassahun,
   },
   {
     id: 5,
     name: "Dr. Nebiyou Damtew",
     initials: "ND",
     specialty: "Radiologist",
-    photo: null,
+    photo: drNebiyouDamtew,
   },
 ];
 
@@ -52,7 +55,9 @@ function DoctorCard({ doctor, delay }) {
       style={{ transitionDelay: `${delay}ms` }}
     >
       {/* Photo placeholder */}
-      <div className={`doctors-card__photo ${!doctor.photo ? "doctors-card__photo--placeholder" : ""}`}>
+      <div
+        className={`doctors-card__photo ${!doctor.photo ? "doctors-card__photo--placeholder" : ""}`}
+      >
         {doctor.photo ? (
           <img
             src={doctor.photo}
@@ -82,7 +87,7 @@ export default function Doctors() {
           subtitle="Our Team"
           title="Meet Our Expert"
           highlight="Doctors"
-          description="Our team of experienced medical professionals is dedicated to providing the highest quality care with compassion and expertise."
+          description="Our team of experienced medical professionals are dedicated to provide the highest quality care with compassion and expertise."
         />
 
         <div className="doctors__grid">

@@ -90,8 +90,8 @@ export default function About() {
         <SectionTitle
           subtitle="About Us"
           title="Why Choose"
-          highlight="Haset Multispeciality Clinic"
-          description="At Haset Multispeciality Clinic, we provide specialist-only care, ensuring every patient is treated exclusively by qualified medical specialists. Our services are available 24/7, including weekends and holidays, so you can always access reliable and continuous expert medical attention whenever you need it."
+          highlight="Haset Multispecialty Clinic"
+          description="At Haset Multispecialty Clinic, we provide specialist-only care, ensuring every patient is treated exclusively by qualified medical specialists. Our services are available 24/7, including weekends and holidays, so you can always access reliable and continuous expert medical attention whenever you need it."
         />
 
         <div className="about__content">
@@ -101,7 +101,7 @@ export default function About() {
           >
             <img
               src={clinicPhoto}
-              alt="Haset Multispeciality Clinic"
+              alt="Haset Multispecialty Clinic"
               className="about__image"
             />
           </div>
@@ -114,7 +114,7 @@ export default function About() {
             <p className="about__mission">
               We believe every patient deserves compassionate and high-quality
               healthcare. Our team of experienced physicians, nurses, and
-              healthcare professionals works together to provide personalized
+              healthcare professionals work together to provide personalized
               treatment plans tailored to each patient’s needs, ensuring the
               best possible health outcomes for patients and their families.
             </p>
