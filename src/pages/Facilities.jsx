@@ -1,6 +1,4 @@
 import "./Facilities.css";
-import digitalXRay from "../assets/eqipments/Digital-x-ray.jpg";
-import geUltrasound from "../assets/eqipments/Ge-healthcare-ultrasound.jpg";
 
 const FACILITIES = [
   {
@@ -18,7 +16,7 @@ const FACILITIES = [
       "High-performance ultrasound for comprehensive diagnostic imaging",
     image:
       "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=GE%20healthcare%20ultrasound%20device%20in%20clinic&image_size=square_hd",
-      // geUltrasound,
+    // geUltrasound,
   },
   {
     id: 3,
@@ -27,15 +25,39 @@ const FACILITIES = [
       "State-of-the-art digital radiography for fast, high-quality imaging",
     image:
       "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=digital%20x-ray%20machine%20in%20hospital&image_size=square_hd",
-      // digitalXRay,
+    // digitalXRay,
   },
   {
     id: 4,
-name: "Mindray Fully Automated Chemistry Analyzer",
-description:
-  "High-performance laboratory equipment capable of running up to 240 tests per hour. Provides accurate biochemistry, hormonal, and electrolyte (including sodium) .",
+    name: "Mindray Fully Automated Chemistry Analyzer",
+    description:
+      "High-performance laboratory equipment capable of running up to 240 tests per hour. Provides accurate biochemistry, hormonal, and electrolyte (including sodium) .",
     image:
       "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=mindray%20fully%20automated%20medical%20machine%20in%20hospital&image_size=square_hd",
+  },
+  {
+    id: 5,
+    name: "Hematology Analyzer",
+    description:
+      "Automated blood cell analyzer for complete blood count (CBC) and related hematology parameters with fast, reliable results.",
+    image:
+      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=hematology%20analyzer%20machine%20in%20medical%20laboratory&image_size=square_hd",
+  },
+  {
+    id: 6,
+    name: "CBS-401 Electrolyte Analyzer",
+    description:
+      "Electrolyte testing system for accurate measurement of key ions such as sodium, potassium, and chloride to support critical clinical decisions.",
+    image:
+      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=CBS-401%20electrolyte%20analyzer%20machine%20in%20hospital%20laboratory&image_size=square_hd",
+  },
+  {
+    id: 7,
+    name: "Accre 8 - Automatic Chemiluminescence Immunoassay",
+    description:
+      "Automated CLIA immunoassay analyzer for high-sensitivity hormone, tumor marker, and infectious disease testing with consistent throughput.",
+    image:
+      "https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=automatic%20chemiluminescence%20immunoassay%20analyzer%20machine%20in%20hospital%20lab&image_size=square_hd",
   },
 ];
 

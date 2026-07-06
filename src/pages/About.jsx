@@ -1,4 +1,5 @@
 import "./About.css";
+import clinicPhoto from "../assets/About-us.jpg";
 import SectionTitle from "../components/SectionTitle";
 import { useScrollAnimation } from "../hooks/useAnimations";
 
@@ -99,8 +100,8 @@ export default function About() {
             className={`about__image-wrapper animate-on-scroll ${isSectionVisible ? "visible" : ""}`}
           >
             <img
-              src="/about_doctors.png"
-              alt="Haset Multispeciality Clinic Doctors"
+              src={clinicPhoto}
+              alt="Haset Multispeciality Clinic"
               className="about__image"
             />
           </div>
@@ -111,7 +112,11 @@ export default function About() {
             ref={contentRef}
           >
             <p className="about__mission">
-             We believe every patient deserves compassionate and high-quality healthcare. Our team of experienced physicians, nurses, and healthcare professionals works together to provide personalized treatment plans tailored to each patient’s needs, ensuring the best possible health outcomes for patients and their families.
+              We believe every patient deserves compassionate and high-quality
+              healthcare. Our team of experienced physicians, nurses, and
+              healthcare professionals works together to provide personalized
+              treatment plans tailored to each patient’s needs, ensuring the
+              best possible health outcomes for patients and their families.
             </p>
 
             <div className="about__values-grid">

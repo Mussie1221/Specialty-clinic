@@ -17,7 +17,11 @@
   left: -100px;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(19, 64, 64, 0.03) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(19, 64, 64, 0.03) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   pointer-events: none;
 }
@@ -38,8 +42,8 @@
 
 .about__image {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
   transition: transform var(--transition-base);
@@ -193,6 +197,5 @@
 
   .about__image-placeholder {
     max-width: 100%;
-    aspect-ratio: 5 / 4;
   }
 }
