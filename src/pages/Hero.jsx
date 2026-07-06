@@ -17,7 +17,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero__description">
-            At Haset Multispecialty Clinic, we are dedicated to providing
+            At Haset Multispecialty Clinic, we are dedicated to provide
             compassionate, high-quality healthcare through experienced
             professionals, modern medical technology, and patient-centered
             treatment. Your health, comfort, and well-being are at the heart of
