@@ -98,54 +98,11 @@ export default function About() {
           <div
             className={`about__image-wrapper animate-on-scroll ${isSectionVisible ? "visible" : ""}`}
           >
-            <div className="about__image-placeholder">
-              <div className="about__image-decoration about__image-decoration--top" />
-              <div className="about__image-decoration about__image-decoration--bottom" />
-              <svg
-                className="about__cross-icon"
-                width="80"
-                height="80"
-                viewBox="0 0 80 80"
-                fill="none"
-                aria-hidden="true"
-              >
-                <rect
-                  x="30"
-                  y="8"
-                  width="20"
-                  height="64"
-                  rx="4"
-                  fill="rgba(255,255,255,0.25)"
-                />
-                <rect
-                  x="8"
-                  y="30"
-                  width="64"
-                  height="20"
-                  rx="4"
-                  fill="rgba(255,255,255,0.25)"
-                />
-                <rect
-                  x="32"
-                  y="10"
-                  width="16"
-                  height="60"
-                  rx="3"
-                  fill="rgba(255,255,255,0.5)"
-                />
-                <rect
-                  x="10"
-                  y="32"
-                  width="60"
-                  height="16"
-                  rx="3"
-                  fill="rgba(255,255,255,0.5)"
-                />
-              </svg>
-              <span className="about__image-label">
-                Haset Multispeciality Clinic
-              </span>
-            </div>
+            <img
+              src="/about_doctors.png"
+              alt="Haset Multispeciality Clinic Doctors"
+              className="about__image"
+            />
           </div>
 
           {/* Right Side - Content */}
