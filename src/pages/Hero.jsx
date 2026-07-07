@@ -1,9 +1,11 @@
 import Button from "../components/Button";
+import heroBackground from "../assets/hs.jpg";
 import "./Hero.css";
 
 export default function Hero() {
   return (
-    <section className="hero" id="home">
+    <section className="hero" id="home" style={{ backgroundImage: `url(${heroBackground})` }}>
+      <div className="hero__overlay"></div>
       <div className="hero__container">
         <div className="hero__content">
           <div className="hero__badge">
@@ -15,14 +17,6 @@ export default function Hero() {
             You Will Rejoice in Our{" "}
             <span className="hero__title-highlight">Services</span>
           </h1>
-
-          <p className="hero__description">
-            At Haset Multispecialty Clinic, we are dedicated to provide
-            compassionate, high-quality healthcare through experienced
-            professionals, modern medical technology, and patient-centered
-            treatment. Your health, comfort, and well-being are at the heart of
-            everything we do.
-          </p>
 
           <div className="hero__actions">
             <Button href="#services" size="large">
